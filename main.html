@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <link rel= "stylesheet" href="style.css">
+
+    <title>To-Do List</title>
+  </head>
+  <body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Todo List</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#table1">Your List</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">About Us</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+
+</nav>
+
+    <br>
+    <div class="container my-4">
+        <h2 class="text-center">Todo's List</h2></div>
+
+    <br>
+<div class="note-image">
+    <img src="notepad.jpg" alt="notepad image" width="400", height="400" align="right">
+</div>
+  
+
+<div class="form-box">
+
+  
+  <div class="mb-3">
+    <label for="title" class="form-label">Title</label>
+    <input type="text" placeholder="Enter Title" class="form-control" id="title" aria-describedby="title">
+    <div id="title-help" class="form-text">Enter the title for your Task</div>
+  </div>
+    <br>
+
+  <div class="mb-3">
+    <div class="form-floating">
+   
+    <textarea class="form-control" placeholder="Leave a comment here" id="description" style="height: 100px"></textarea>
+    <label for="description">Task Description</label>
+    </div>
+  </div>
+<br>
+  <button type="submit"  id="add-button" class="btn btn-primary">Add to List</button>
+
+</div>
+</div>
+
+<div class="todo-list">
+    
+        
+   
+    <div class="todo-table">
+    <h2 class="text-center">Your Tasks</h2>
+    <br>
+
+    <button type="button" class="btn btn-dark" onclick="document.getElementById('table1').className='table table-dark table-striped';">Dark Mode</button>
+    <button type="button" class="btn btn-light" onclick="document.getElementById('table1').className='table table-success table-striped';">Light Mode</button>
+    <br>
+    <br>
+        <table id="table1" class="table table-dark table-striped">
+  <thead>
+    <tr>
+      <th scope="col">SNo.</th>
+      <th scope="col">Item Title</th>
+      <th scope="col">Item Description</th>
+      <th scope="col">Date and Time</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody id="table-body">
+    <tr>
+      <th scope="row">-</th>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td><button class="btn-primary">Delete</button>
+    </tr>
+  
+  </tbody>
+</table>
+<button class="btn btn-primary" id="clear-list" onclick="clearStorage();">Clear List</button>
+    </div>
+</div>
+<br>
+<div class="ending">
+  <h2 class="text-center">Developed by Ruchit Nigam</h2>
+</div>
+<br>
+ <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">TodoList</a></li>
+                            <li><a href="#">Show List</a></li>
+                            <li><a href="#">Hosting</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>Todo's List</h3>
+                        <p>They list everything that you have to do, with the most important tasks at the top of the list, and the least important tasks at the bottom. By keeping such a list, you make sure that your tasks are written down all in one place so you don't forget anything important.</p>
+                    </div>
+                    <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+                </div>
+                <p class="copyright">TodoList © 2018</p>
+            </div>
+        </footer>
+    </div>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+<script src="main.js">
+
+  </body>
+</html>
